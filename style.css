@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Navbar styles using Flexbox */
+.navbar {
+  background-color: #08004d;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Hero section */
+.hero {
+  padding: 2rem;
+  background-color: #c8e6c9;
+  text-align: center;
+}
+
+/* Grid layout */
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.box {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive media queries */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
